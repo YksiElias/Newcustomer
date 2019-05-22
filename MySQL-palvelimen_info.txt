@@ -1,0 +1,34 @@
+MySQL ja HTML-hallinta Danielin palvelimella
+
+MySQL:n hallinta tapahtuu Danielin palvelimella Putty-ohjelmalla. 
+Puttyn voi ladata koneelle t‰‰lt‰:
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+Puttyssa palvelimen osoitteeksi laitetaan:
+146.0.40.202
+Portiksi laitetaan: 2211
+Salaustyyppin‰ on: SSH
+
+Palvelimen k‰ytt‰j‰tunnuksemme on:
+mastercode
+Salasana: superskill
+
+SQL:‰‰ p‰‰see hallinnoimaan kirjoittamalla komennon:
+mysql -u mastercode -p
+... jonka j‰lkeen salasanaksi annetaan:
+superskill
+
+MySQL-tietokantamme on nimelt‰‰n mastercode,
+joten sit‰ k‰ytet‰‰n antamalla komento:
+use mastercode;
+
+Komentokentt‰‰n syˆtet‰‰n SQL-komennot normaaliin tapaan.
+
+HTML-hallinta
+
+On myˆs mahdollista laittaa samalle palvelimelle HTML-sivuja.
+T‰llˆin tiedostojen siirtoon kannattaa k‰ytt‰‰ esimerkiksi
+winscp-ohjelmaa.
+
+Mahdolliset html-sivut (index.html) n‰kyy osoitteessa:
+http://mastercode.superstoremega.shop/
