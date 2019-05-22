@@ -103,11 +103,16 @@ namespace FantasticCustomer
                 MessageBox.Show("Sähköpostiosoite on liian lyhyt");
                 emailBoxi.Focus();
             }
-            //else if (emailBoxi.Text.IndexOf("@") = -1)
-            //{
-            //    MessageBox.Show("Sähköpostiosoite on puutteellinen");
-            //    emailBoxi.Focus();
-            //}
+            else if (emailBoxi.Text.IndexOf("@", 0) < 0)
+            {
+                MessageBox.Show("Sähköpostiosoite on puutteellinen");
+                emailBoxi.Focus();
+            }
+            else if (emailBoxi.Text.IndexOf(".", 0) < 0)
+            {
+                MessageBox.Show("Sähköpostiosoite on puutteellinen");
+                emailBoxi.Focus();
+            }
             else if (salasanaBoxi.Text.Length < 8)
             {
                 MessageBox.Show("Salasana on liian lyhyt");
