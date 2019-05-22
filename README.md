@@ -1,2 +1,0 @@
-# Newcustomer
-Uusi yritys asiakasrekisterijutulle
