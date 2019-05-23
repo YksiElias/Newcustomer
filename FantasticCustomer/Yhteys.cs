@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace FantasticCustomer
@@ -59,11 +60,11 @@ namespace FantasticCustomer
                 switch (ex.Number)
                 {
                     case 0:
-                     //   Messagebox.Show("Cannot connect to server.");
+                        MessageBox.Show("Invalid connection");
                         break;
 
                     case 1045:
-                       // MessageBox.Show("Invalid username/password.");
+                        MessageBox.Show("Invalid username/password.");
                         break;
                 }
                 return false;
@@ -79,11 +80,12 @@ namespace FantasticCustomer
                 return true;
             }
             catch (MySqlException ex)
-            { 
-          //  MessageBox.Show(ex.Message);
+            {
+                  MessageBox.Show(ex.Message);
+            }
             return false;
         }
-    }
+    
         //Insert statement
         public void Insert()
         {
