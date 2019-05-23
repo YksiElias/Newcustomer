@@ -13,6 +13,7 @@ namespace FantasticCustomer
     public partial class Form1 : Form
     {
         Asiakas[] uusiAsiakas;
+        Yhteys[] uusiYhteys;
 
         public Form1()
         {
