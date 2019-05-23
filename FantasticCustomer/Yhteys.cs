@@ -56,7 +56,7 @@ namespace FantasticCustomer
                 //on the error number.
                 //The two most common error numbers when connecting are as follows:
                 //0: Cannot connect the server.
-                //1045: Invalid user name and/OrderedParallelQuery password.
+                //1045: Invalid user name and/or password.
                 switch (ex.Number)
                 {
                     case 0:
