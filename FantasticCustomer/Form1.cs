@@ -14,6 +14,8 @@ namespace FantasticCustomer
     {
         Asiakas[] uusiAsiakas;
         Yhteys[] uusiYhteys;
+        private bool i;
+       
 
         public Form1()
         {
@@ -119,13 +121,26 @@ namespace FantasticCustomer
                 MessageBox.Show("Salasana on liian lyhyt");
                 salasanaBoxi.Focus();
             }
-
+            else if (true)
+            {
             uusiAsiakas = new Asiakas[]
             {
                 new Asiakas(enimiBoxi.Text, snimiBoxi.Text, osoiteBoxi.Text, pnumeroBoxi.Text, ptpBoxi.Text, puhelinBoxi.Text, emailBoxi.Text, salasanaBoxi.Text)
             };
             lisaa(enimiBoxi.Text, snimiBoxi.Text, osoiteBoxi.Text, pnumeroBoxi.Text, ptpBoxi.Text, puhelinBoxi.Text, emailBoxi.Text, salasanaBoxi.Text);
             TyhjennaKentat();
+                if (i == true)
+                {
+                    TunnusBox.Clear();
+                    SalasanaBox.Clear();
+                    panel1.Visible = true;
+                    label12.Text = "";
+                    TunnusBox.Focus();
+                }
+            }
+
+
+
         }
 
         private void PnumeroBoxi_KeyPress(object sender, KeyPressEventArgs e)
@@ -146,5 +161,41 @@ namespace FantasticCustomer
                 e.Handled = true;
             }
         }
+
+        private void buttonKirjaudu_Click(object sender, EventArgs e)
+        {
+            if (TunnusBox.Text.Length < 7)
+            {
+                MessageBox.Show("Sähköpostiosoite on liian lyhyt");
+                TunnusBox.Focus();
+            }
+            else if (TunnusBox.Text.IndexOf("@", 0) < 0)
+            {
+                MessageBox.Show("Sähköpostiosoite on puutteellinen");
+                TunnusBox.Focus();
+            }
+            else if (TunnusBox.Text.IndexOf(".", 0) < 0)
+            {
+                MessageBox.Show("Sähköpostiosoite on puutteellinen");
+                TunnusBox.Focus();
+            }
+            else if (true)
+            {
+                panel1.Visible = false;
+                label12.Text = "Kirjautuneena: " + TunnusBox.Text;
+                i = false;
+            }
+        }
+
+        private void buttonLuo_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            label12.Text = "Luo käyttäjätunnus";
+            i = true;
+        }
+    }
+
+    internal class Yhteys
+    {
     }
 }
