@@ -143,23 +143,22 @@ namespace FantasticCustomer
             try
             {
                 // This is connection string i have assigned the database file address path
-                string MyConnection2 = "server=146.0.40.202; port=2211; database=mastercode; username=mastercode; password=superskill";
-
-                
+                string MyConnection2 = "server=146.0.40.202; port=3306; database=mastercode; username=mastercode; password=superskill";
+             
+                // This is MySqlConnection here to created the object and pass connection string
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                //try
+                //{
+                //    MyConn2.Open();
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Yhteyttä ei voitu muodostaa");
+                //}
                 // This is insert query in which taking input from user through windows forms
                 string Query = "insert into asiakas(etunimi,sukunimi,lahiosoite,postinumero,postitoimipaikka,puhelin,email,salasana) values('" + this.enimiBoxi.Text + "','"
                     + this.snimiBoxi.Text + "','" + this.osoiteBoxi.Text + "','" + this.pnumeroBoxi.Text + "','" + this.ptpBoxi.Text + "','" + this.puhelinBoxi.Text + "','" + this.emailBoxi.Text + "','" + this.salasanaBoxi.Text + "');";
 
-                // This is MySqlConnection here to created the object and pass connection string
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                try
-                {
-                    MyConn2.Open();
-                }
-                catch
-                {
-                    MessageBox.Show("Yhteyttä ei voitu muodostaa");
-                }
                 // This is command class which will handle the query and connection object
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
 
