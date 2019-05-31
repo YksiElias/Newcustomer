@@ -18,3 +18,17 @@ C:\Users\rasmus.laine\Documents\Git\Newcustomer\Newcustomer\FantasticCustomer\ob
 C:\Users\rasmus.laine\Documents\Git\Newcustomer\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.csproj.CoreCompileInputs.cache
 C:\Users\rasmus.laine\Documents\Git\Newcustomer\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.exe
 C:\Users\rasmus.laine\Documents\Git\Newcustomer\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.pdb
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\FantasticCustomer.exe.config
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\FantasticCustomer.exe
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\FantasticCustomer.pdb
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.csprojResolveAssemblyReference.cache
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.Form1.resources
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.Properties.Resources.resources
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.csproj.GenerateResource.Cache
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.csproj.CoreCompileInputs.cache
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.exe
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\obj\Debug\FantasticCustomer.pdb
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\MySql.Data.dll
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\Google.Protobuf.dll
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\hannu.forsberg\Desktop\Newcustomer\FantasticCustomer\bin\Debug\MySql.Data.xml

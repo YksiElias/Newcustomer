@@ -89,7 +89,31 @@ namespace FantasticCustomer
         //Insert statement
         public void Insert()
         {
+            try
+            {
+                string Query = "insert into mastercode(Etunimi,Sukunimi,Lahiosoite,Postinumero,Postitoimipaikka,Puhelinnumero,Sahkopostiosoite,Salasana) values('" + this.enimiBoxi.Text + "','"
+                    + this.snimiBoxi.Text + "','" + this.osoiteBoxi.Text + "','" + this.pnumeroBoxi.Text + "','" + this.ptpBoxi.Text + "','" + this.puhelinBoxi.Text + "','" + this.emailBoxi.Text + "','" + this.salasanaBoxi.Text + "');";
 
+                MySqlCommand MyCommand2 = new MySqlCommand(Query);
+
+                MySqlDataReader MyReader2;
+
+                connection.Open();
+
+                MyReader2 = MyCommand2.Executereader();
+
+                MessageBox.Show("Tiedot tallennettu");
+
+                while (MyReader2.Read())
+                {
+
+                }
+                connection.Close();
+            }
+            catch (Exeption ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //Update statement
@@ -107,4 +131,3 @@ namespace FantasticCustomer
         //Select statement
     }
 }
-

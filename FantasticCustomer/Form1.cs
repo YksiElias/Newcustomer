@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace FantasticCustomer
 {
@@ -137,8 +138,41 @@ namespace FantasticCustomer
                     label12.Text = "";
                     TunnusBox.Focus();
                 }
-            }
 
+            }
+            try
+            {
+                // This is connection string i have assigned the database file address path
+                string MyConnection2 = "datasource=146.0.40.202; port=2211; username=mastercode; password=superskill;";
+
+                // This is insert query in which taking input from user through windows forms
+                string Query = "insert into mastercode(Etunimi,Sukunimi,Lahiosoite,Postinumero,Postitoimipaikka,Puhelinnumero,Sahkopostiosoite,Salasana) values('" + this.enimiBoxi.Text + "','"
+                    + this.snimiBoxi.Text + "','" + this.osoiteBoxi.Text + "','" + this.pnumeroBoxi.Text + "','" + this.ptpBoxi.Text + "','" + this.puhelinBoxi.Text + "','" + this.emailBoxi.Text + "','" + this.salasanaBoxi.Text + "');";
+
+                // This is MySqlConnection here to created the object and pass connection string
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+
+                // This is command class which will handle the query and connection object
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+
+                MySqlDataReader MyReader2;
+
+                MyConn2.Open();
+
+                MyReader2 = MyCommand2.ExecuteReader(); // Here our query will be executed and data saved into the database
+
+                MessageBox.Show("Tiedot tallennettu");
+
+                while (MyReader2.Read())
+                {
+
+                }
+                MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
